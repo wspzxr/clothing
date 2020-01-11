@@ -34,8 +34,8 @@ class Login extends Component{
             this.props.history.replace('./admin/home')
           })
         })
-                   .catch((err)=>{message.error(err.msg);
-                   })
+        .catch((err)=>{message.error(err.msg);
+        })
       }
     })
   }

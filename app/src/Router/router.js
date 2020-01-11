@@ -3,7 +3,8 @@ import {HashRouter,Switch,Route,Redirect} from 'react-router-dom'
 import Login from '../pages/Login/Login'
 import Admin from '../pages/Admin/Admin'
 import Home from '../pages/Home/Home'
-
+import ShopList from '../pages/Shop/List'
+import ShopAdd from '../pages/Shop/Add'
 class Router extends Component{
   render(){
     return(
@@ -16,6 +17,9 @@ class Router extends Component{
               <Admin>
                 <Switch>
                   <Route path="/admin/home" component={Home}></Route>
+                  {/* 用户相关 */}
+                  <Route path="/admin/shop/list" component={ShopList}></Route>
+                  <Route path="/admin/shop/add" component={ShopAdd}></Route>
                 </Switch>
               </Admin>
             )

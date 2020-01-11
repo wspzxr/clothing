@@ -17,10 +17,10 @@ let arr =[
         path:'/shop/list'
       },
       {
-        name:'商品修改',
+        name:'商品添加',
         icon:"scissor",
         id:'1-1',
-        path:'/shop/update'
+        path:'/shop/add'
       }
     ]
   },
