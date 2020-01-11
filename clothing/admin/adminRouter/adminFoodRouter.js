@@ -47,8 +47,8 @@ router.post('/delFood',(req,res)=>{
 })
 //添加数据
 router.post('/addFood',(req,res)=>{
-  let {name,price,img,foodType,color,desc} = req.body 
-  Food.add(name,price,img,foodType,color,desc)
+  let {name,price,img,foodType,desc} = req.body 
+  Food.add(name,price,img,foodType,desc)
   .then((data)=>{res.send({err:0,msg:'添加ok'})})
   .catch((err)=>{
     console.log(err)
@@ -57,8 +57,8 @@ router.post('/addFood',(req,res)=>{
 //修改 
 router.post('/updateFood',(req,res)=>{
   console.log(111)
-  let {foodId,name,price,img,foodType,color,desc} = req.body
-  Food.update(foodId,name,price,img,foodType,color,desc)
+  let {foodId,name,price,img,foodType,desc} = req.body
+  Food.update(foodId,name,price,img,foodType,desc)
   .then((data)=>{res.send({err:0,msg:'修改ok'})})
   .catch((data)=>{res.send({err:-1,msg:'修改失败'})})
 })

@@ -35,12 +35,6 @@ class UserList extends Component{
             width:120,
           },
           {
-            title: '商品颜色',
-            dataIndex: 'color',
-            key: 'color',
-            width:120,
-          },
-          {
             title: '商品图片',
             dataIndex: 'img',
             key: 'img',
@@ -147,6 +141,6 @@ class UserList extends Component{
           </Drawer>
         </Fragment>
       )
-    }d
+    }
   }
   export default UserList
