@@ -1,5 +1,6 @@
 // 这里是权限列表处理
 import arrList from './ArrList'
+import {getItem} from '../../utils/webStorage'
 export const getList=(arrIds)=>{
   // console.log(arrList,arrIds)
   let result=[]

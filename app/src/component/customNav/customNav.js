@@ -16,6 +16,8 @@ class CustomNav extends Component{
       let list = getList(netlist)
       this.setState({list:list})
     },1000)
+    // let list = getList()
+    // this.setState({list:list})
   }
   renderMenu(item,index){
     if(item.children){
