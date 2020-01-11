@@ -2,7 +2,7 @@ import React,{Component} from 'react'
 import { Layout, Menu, Breadcrumb, Icon  } from 'antd';
 import style from './admin.module.less'
 import CustomNav from '../../component/customNav/customNav'
-
+import HeaderNav from '../../component/customNav/HeaderNav'
 const { SubMenu } = Menu;
 const { Header, Content, Sider, Footer } = Layout;
 class Admin extends Component{
@@ -19,8 +19,9 @@ class Admin extends Component{
     return(
       <Layout style={{width:'100vw',height:'100vh'}}>
         {/* 头部 */}
-        <Header  className="header" style={{background:'#0099ff'}}>
-          <div className={style.logo} />
+        <Header className={style['admin-header']}> 
+          <div className={style.logo}>管理员：韩梅梅</div>
+          <HeaderNav className={style.lala}></HeaderNav>
         </Header>
         <Layout>
           {/* 侧边栏 */}

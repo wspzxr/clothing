@@ -89,8 +89,7 @@ module.exports = function(proxy, allowedHost) {
     public: allowedHost,
     proxy:{
       '/clothing':{
-        // target:'http://localhost:3003',
-        target:'http://www.baidu.com',
+        target:'http://localhost:3003',
         changeOrigin:true,
         pathRewrite:{
           "^/clothing":""
