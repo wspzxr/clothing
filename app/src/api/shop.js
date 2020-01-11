@@ -1,7 +1,7 @@
 import axios from '../utils/axios'
 // 商品的获取
 export const GetFoods = async (page=1,pageSize=3)=>{
-  let res = await axios.post('/clothing/v1/admin/food/getfoods',{page,pageSize})
+  let res = await axios.post('/clothing/v1/admin/shop/getShops',{page,pageSize})
   if(res.err!==0){
     throw res
   }
@@ -9,7 +9,7 @@ export const GetFoods = async (page=1,pageSize=3)=>{
 }
 // 删除
 export const DelFood = async (foodId)=>{
-  let res = await axios.post('/clothing/v1/admin/food/delFood',{foodId})
+  let res = await axios.post('/clothing/v1/admin/shop/delShop',{foodId})
   if(res.err!==0){
     throw res
   }
@@ -18,7 +18,7 @@ export const DelFood = async (foodId)=>{
 // 添加
 // name,price,img,foodType,desc
 export const AddFood = async (obj)=>{
-  let res = await axios.post('/clothing/v1/admin/food/addFood',{...obj})
+  let res = await axios.post('/clothing/v1/admin/shop/addShop',{...obj})
   if(res.err!==0){
     throw res
   }
@@ -30,7 +30,7 @@ export const UpdateFood= async (obj)=>{
   console.log(obj)
   let data={...obj}
   data.foodId=data._id
-  let res = await axios.post('/clothing/v1/admin/food/updateFood',data)
+  let res = await axios.post('/clothing/v1/admin/shop/updateShop',data)
   if(res.err!==0){
     throw res
   }

@@ -3,7 +3,7 @@ const router = express.Router()
 const Food = require('../../control/foodController')
 
 //查询接口（分页查询  分类查询 关键字查询）
-router.post('/getFoods',(req,res)=>{
+router.post('/getShops',(req,res)=>{
   let page=Number(req.body.page)||1
   let pageSize=Number(req.body.pageSize)||2
   Food.get(page,pageSize)
@@ -15,7 +15,7 @@ router.post('/getFoods',(req,res)=>{
     res.send({err:-1,msg:'查询失败'})})
 })
 // 分类查询
-router.post('/getFoodsByType',(req,res)=>{
+router.post('/getShopsByType',(req,res)=>{
   let {foodType} = req.body 
   let page=Number(req.body.page)||1
   let pageSize = Number(req.body.pageSize)||2
@@ -25,7 +25,7 @@ router.post('/getFoodsByType',(req,res)=>{
   })
 })
 // 关键字查询
-router.post('/getFoodsByKw',(req,res)=>{
+router.post('/getShopsByKw',(req,res)=>{
   let page=Number(req.body.page)||1
   let pageSize = Number(req.body.pageSize)||2
   let kw = req.body.kw 
@@ -35,7 +35,7 @@ router.post('/getFoodsByKw',(req,res)=>{
   })
 })
 //删除接口
-router.post('/delFood',(req,res)=>{
+router.post('/delShop',(req,res)=>{
   let {foodId}=req.body
   Food.del(foodId)
   .then((data)=>{
@@ -46,7 +46,7 @@ router.post('/delFood',(req,res)=>{
   })
 })
 //添加数据
-router.post('/addFood',(req,res)=>{
+router.post('/addShop',(req,res)=>{
   let {name,price,img,foodType,desc} = req.body 
   Food.add(name,price,img,foodType,desc)
   .then((data)=>{res.send({err:0,msg:'添加ok'})})
@@ -55,7 +55,7 @@ router.post('/addFood',(req,res)=>{
     res.send({err:-1,msg:'添加失败'})})
 })
 //修改 
-router.post('/test',(req,res)=>{
+router.post('/updateShop',(req,res)=>{
   console.log(111)
   let {foodId,name,price,img,foodType,desc} = req.body
   Food.update(foodId,name,price,img,foodType,desc)
