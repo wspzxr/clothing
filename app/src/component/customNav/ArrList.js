@@ -63,7 +63,7 @@ let arr =[
     ]
   },
   {
-    name:'营销中心',
+    name:'人员管理',
     icon:"notification",
     id:'4',
     path:'/conter'
