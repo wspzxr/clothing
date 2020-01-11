@@ -7,6 +7,7 @@ import Book from '../pages/book/book'
 import AddBook from '../pages/book/add'
 import ShopList from '../pages/Shop/List'
 import ShopAdd from '../pages/Shop/Add'
+import Order from '../pages/Order/order'
 class Router extends Component{
   render(){
     return(
@@ -24,6 +25,8 @@ class Router extends Component{
                   <Route path="/admin/shop/add" component={ShopAdd}></Route>
                   <Route path="/admin/book/list" component={Book}></Route>
                   <Route path="/admin/book/addbook" component={AddBook}></Route>
+                  <Route path="/admin/goods/list" component={Order}></Route>
+
                 </Switch>
               </Admin>
             )
