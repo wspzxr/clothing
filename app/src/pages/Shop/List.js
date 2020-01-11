@@ -85,7 +85,7 @@ class UserList extends Component{
       }
     }
     componentDidMount(){
-      this.getTableData(1,4)
+      this.getTableData(1,3)
     }
     getTableData(nowPage,pageSize){
       // 发起网络请求 获取数据并更新界面

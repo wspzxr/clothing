@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const Food = require('../../control/foodController')
+const Food = require('../../control/shopController')
 
 //查询接口（分页查询  分类查询 关键字查询）
 router.post('/getShops',(req,res)=>{
