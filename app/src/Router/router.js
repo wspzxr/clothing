@@ -3,10 +3,11 @@ import {HashRouter,Switch,Route,Redirect} from 'react-router-dom'
 import Login from '../pages/Login/Login'
 import Admin from '../pages/Admin/Admin'
 import Home from '../pages/Home/Home'
-import Book from '../pages/book/book'
+import BookList from '../pages/book/list'
 import AddBook from '../pages/book/add'
 import ShopList from '../pages/Shop/List'
 import ShopAdd from '../pages/Shop/Add'
+
 import Order from '../pages/Order/order'
 import Conter from "../pages/book/conter";
 class Router extends Component{
@@ -24,9 +25,10 @@ class Router extends Component{
                   {/* 用户相关 */}
                   <Route path="/admin/shop/list" component={ShopList}></Route>
                   <Route path="/admin/shop/add" component={ShopAdd}></Route>
-                  <Route path="/admin/book/list" component={Book}></Route>
+                  <Route path="/admin/book/list" component={BookList}></Route>
                   <Route path="/admin/book/addbook" component={AddBook}></Route>
                   <Route path="/admin/goods/list" component={Order}></Route>
+                  
 
                   <Route path="/admin/conter" component={Conter}></Route>
                 </Switch>

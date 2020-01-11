@@ -1,7 +1,7 @@
 import React,{Component}from 'react'
-import { Card, message} from 'antd';
+import { Card, message} from 'antd'
 import {AddFood} from '../../api/shop'
-import style from './add.module.less'
+import style from './css/add.module.less'
 
 class UserList extends Component{
   constructor(){
@@ -11,8 +11,7 @@ class UserList extends Component{
       price:'',
       img:null,
       foodType:'',
-      desc:'',
-      color:''
+      desc:''
     }
   }
   upload=()=>{
@@ -41,7 +40,7 @@ class UserList extends Component{
     })
   }
   render(){
-    let {name,price,img,foodType,desc,color} =this.state
+    let {name,price,img,foodType,desc} =this.state
     return(
       <Card title="商品添加" className={style.shopAdd}>
         <label>名字:</label>
@@ -58,11 +57,6 @@ class UserList extends Component{
         <input className={style.shopInput} type="text" value={foodType} onChange={(e)=>{
           let value = e.target.value
           this.setState({foodType:value})
-        }} /><br/><hr/>
-        <label>颜色:</label>
-        <input className={style.shopInput} type="text" value={color} onChange={(e)=>{
-          let value = e.target.value
-          this.setState({color:value})
         }} /><br/><hr/>
         <label>描述:</label>
         <input className={style.shopInput} type="text" value={desc} onChange={(e)=>{

@@ -9,6 +9,6 @@ let foodSchema= mongoose.Schema({
     foodType:{ type:String,required:true },
    
 })
-let  foodModel = mongoose.model('foods',foodSchema)
+let  foodModel = mongoose.model('shops',foodSchema)
 
 module.exports = foodModel

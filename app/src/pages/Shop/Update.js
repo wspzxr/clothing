@@ -1,6 +1,7 @@
 import React,{Component, Fragment}from 'react'
 import {Button,message} from 'antd';
 import {UpdateFood} from '../../api/shop'
+import style from './css/update.module.less'
 
 class FoodUpdate extends Component{
   constructor(props){
@@ -11,8 +12,8 @@ class FoodUpdate extends Component{
   }
   componentWillReceiveProps(props,state){
     console.log('props 改变')
-    let  {_id,name,price,img,foodType,color,desc}=props.updateData 
-    this.setState({_id,name,price,img,foodType,color,desc})
+    let  {_id,name,price,img,foodType,desc}=props.updateData 
+    this.setState({_id,name,price,img,foodType,desc})
   }
   upload=()=>{
     let file=this.refs.file.files[0]
@@ -31,32 +32,27 @@ class FoodUpdate extends Component{
     })
   }
   render(){
-    let {_id,name,price,img,foodType,color,desc} = this.state
+    let {_id,name,price,img,foodType,desc} = this.state
     // console.log(this)
     return(
       <Fragment>
          商品编号:{_id}<br/>
-         名称:<input type='text' value={name} onChange={(e)=>{
+         名称:<input className={style.shopInput} type='text' value={name} onChange={(e)=>{
            let value =e.target.value
            this.setState({name:value})
          }}></input>
          <br/>
-         价格:<input type='text' value={price} onChange={(e)=>{
+         价格:<input className={style.shopInput} type='text' value={price} onChange={(e)=>{
            let value =e.target.value
            this.setState({price:value})
          }}></input>
          <br/>
-         商品类型:<input type='text' value={foodType} onChange={(e)=>{
+         商品类型:<input className={style.shopInput} type='text' value={foodType} onChange={(e)=>{
            let value =e.target.value
            this.setState({foodType:value})
          }}></input>
          <br/>
-         颜色:<input type='text' value={color} onChange={(e)=>{
-           let value =e.target.value
-           this.setState({color:value})
-         }}></input>
-         <br/>
-         描述:<input type='text' value={desc} onChange={(e)=>{
+         描述:<input className={style.shopInput} type='text' value={desc} onChange={(e)=>{
            let value =e.target.value
            this.setState({desc:value})
          }}></input>
@@ -64,7 +60,7 @@ class FoodUpdate extends Component{
          <input type="file" ref='file'/>
          <Button size='small' onClick={this.upload}>图片上传</Button>
          <br/>
-         缩略图:<img width='100' height='100' src={img} alt=""></img><br/>
+         <img width='100' height='100' src={img} alt=""></img><br/>
         <Button onClick={this.submit}>修改</Button>
       </Fragment>
     )

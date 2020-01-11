@@ -35,12 +35,6 @@ class UserList extends Component{
             width:120,
           },
           {
-            title: '商品颜色',
-            dataIndex: 'color',
-            key: 'color',
-            width:120,
-          },
-          {
             title: '商品图片',
             dataIndex: 'img',
             key: 'img',
@@ -91,7 +85,7 @@ class UserList extends Component{
       }
     }
     componentDidMount(){
-      this.getTableData(1,4)
+      this.getTableData(1,3)
     }
     getTableData(nowPage,pageSize){
       // 发起网络请求 获取数据并更新界面
@@ -147,6 +141,6 @@ class UserList extends Component{
           </Drawer>
         </Fragment>
       )
-    }d
+    }
   }
   export default UserList
