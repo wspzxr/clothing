@@ -3,7 +3,7 @@ const router = express.Router()
 const Food = require('../../control/foodController')
 
 //查询接口（分页查询  分类查询 关键字查询）
-router.post('/getFoods',(req,res)=>{
+router.post('/getBooks',(req,res)=>{
   let page=Number(req.body.page)||1
   let pageSize=Number(req.body.pageSize)||2
   Food.get(page,pageSize)
@@ -35,7 +35,7 @@ router.post('/getFoodsByKw',(req,res)=>{
   })
 })
 //删除接口
-router.post('/delFood',(req,res)=>{
+router.post('/delBook',(req,res)=>{
   let {foodId}=req.body
   Food.del(foodId)
   .then((data)=>{
@@ -46,19 +46,19 @@ router.post('/delFood',(req,res)=>{
   })
 })
 //添加数据
-router.post('/addFood',(req,res)=>{
-  let {name,price,img,foodType,desc} = req.body 
-  Food.add(name,price,img,foodType,desc)
+router.post('/addBook',(req,res)=>{
+  let {title,permission,arttype,settop} = req.body 
+  Food.add(title,permission,arttype,settop)
   .then((data)=>{res.send({err:0,msg:'添加ok'})})
   .catch((err)=>{
     console.log(err)
     res.send({err:-1,msg:'添加失败'})})
 })
 //修改 
-router.post('/test',(req,res)=>{
+router.post('/updateBook',(req,res)=>{
   console.log(111)
-  let {foodId,name,price,img,foodType,desc} = req.body
-  Food.update(foodId,name,price,img,foodType,desc)
+  let {foodId,title,permission,arttype,settop} = req.body
+  Food.update(foodId,title,permission,arttype,settop)
   .then((data)=>{res.send({err:0,msg:'修改ok'})})
   .catch((data)=>{res.send({err:-1,msg:'修改失败'})})
 })

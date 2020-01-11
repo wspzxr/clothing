@@ -1,8 +1,12 @@
 import React,{Component} from 'react'
+import Line from '../../component/pie/line'
+
 class Home extends Component{
   render(){
     return(
-      <div>Home</div>
+      <div className='home'>
+        <Line></Line>
+      </div>
     )
   }
 }

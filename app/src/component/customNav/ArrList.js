@@ -55,10 +55,10 @@ let arr =[
         path:'/book/list'
       },
       {
-        name:'文章修改',
+        name:'文章添加',
         icon:"scissor",
         id:'3-1',
-        path:'/book/update'
+        path:'/book/addbook'
       }
     ]
   },
