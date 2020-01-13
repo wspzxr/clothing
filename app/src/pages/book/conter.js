@@ -48,7 +48,7 @@ class Conter extends Component {
           width: 300,
           height: 400,
         }}
-        operations={['  添加至管理员  ', '添加至普通成员']}
+        operations={['添加至超级管理员  ', '添加至普通管理员']}
         targetKeys={this.state.targetKeys}
         onChange={this.handleChange}
         render={item => `${item.title}-${item.description}`}
