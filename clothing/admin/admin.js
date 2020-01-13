@@ -3,10 +3,7 @@ const router =express.Router()
 
 const Login = require('./adminRouter/adminUserRouter')
 const Root = require('./adminRouter/adminRootRouter')
-<<<<<<< HEAD
 // const Food = require('./adminRouter/adminFoodRouter')
-=======
->>>>>>> 8473ce1b490323083693228c37b77bbad856aefc
 const Order = require('./adminRouter/adminOrderRouter')
 const Book = require('./adminRouter/adminBookRouter')
 const Shop = require('./adminRouter/adminShopRouter')
