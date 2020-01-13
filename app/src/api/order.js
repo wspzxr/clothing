@@ -3,7 +3,7 @@ import axios from '../utils/axios'
 export const GetOrder= async (page=1,pageSize=7)=>{
     let res = await axios.post('/clothing/v1/admin/order/getOrder',{page,pageSize})
     if(res.err!==0){
-      throw res
+      throw res 
     }
     return res
 }
@@ -26,15 +26,15 @@ export const DelOrder= async (foodId)=>{
 //   return res
 // }
 
-// 更新
-export const UpdateBook= async (obj)=>{
-  // 接口数据需要一个foodId  将_id 转化为foodId
-  let data={...obj}
-  data.foodId=data._id
+// // 更新
+// export const UpdateBook= async (obj)=>{
+//   // 接口数据需要一个foodId  将_id 转化为foodId
+//   let data={...obj}
+//   data.foodId=data._id
 
-  let res = await axios.post('/clothing/v1/admin/book/updateBook',data)
-  if(res.err!==0){
-    throw res
-  }
-  return res
-}
+//   let res = await axios.post('/clothing/v1/admin/book/updateBook',data)
+//   if(res.err!==0){
+//     throw res
+//   }
+//   return res
+// }

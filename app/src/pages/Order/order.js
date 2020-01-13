@@ -1,8 +1,6 @@
 import React, { Component,Fragment } from 'react'
 import {Button,message,Popconfirm, Spin, Table, Pagination, Drawer} from 'antd'
-import {GetBooks,DelBook} from '../../api/book'
 import {GetOrder,DelOrder} from '../../api/order'
-// import BookUpdate from './update'
 
 class Book extends Component{
     constructor(){

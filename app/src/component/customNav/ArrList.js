@@ -35,12 +35,6 @@ let arr =[
         id:'2-0',
         path:'/goods/list'
       },
-      {
-        name:'订单修改',
-        icon:"scissor",
-        id:'2-1',
-        path:'/goods/update'
-      }
     ]
   },
   {
